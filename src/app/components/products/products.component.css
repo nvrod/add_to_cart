@@ -1,0 +1,87 @@
+
+.container{
+  display: flex;
+  gap: 2em;
+}
+
+.cart-top hr{
+  color: var(--navy);
+}
+
+.item{
+  margin-top: 2em;
+  margin-left: -1em;
+  border: 1px solid var(--navy);
+  width: 10em;
+  padding: 1em;
+  border-radius: 10px;
+  transition: box-shadow .15s,transform .15s;
+  cursor: pointer;
+}
+
+.item:hover {
+  box-shadow: rgba(45, 35, 66, 0.3) 0 4px 8px, rgba(45, 35, 66, 0.2) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+  transform: translateY(-2px);
+ }
+
+ .item:focus {
+  box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+ }
+
+ .item:active {
+  box-shadow: #D6D6E7 0 3px 7px inset;
+  transform: translateY(2px);
+ }
+
+.item img{
+  width: 8em;
+}
+
+
+.product-cnt{
+  gap: 2em;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  padding: 2em;
+}
+.card{
+  padding: .5em 2em;
+}
+
+.card-img-cnt{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-img-cnt img{
+  width: 10em;
+  padding: 2em 0;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.card-img-cnt img:hover{
+  transition: 0.3s ease-in-out;
+  transform: scale(1.1) ;
+}
+
+.card-info h2{
+  font-size: 25px;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 20em;
+}
+
+.card-info h3{
+  font-size: 20px;
+}
+
+.card-info p{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 20em;
+}
