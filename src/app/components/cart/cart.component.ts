@@ -9,6 +9,7 @@ import { CartService } from '../../service/cart.service';
 export class CartComponent implements OnInit {
 
   public products:any = [];
+
   public grandTotal: number = 0;
   constructor( private CartService: CartService){
 
@@ -24,6 +25,10 @@ export class CartComponent implements OnInit {
 
   removeItem(item: any){
     this.CartService.removeCartItem(item);
+  }
+
+  emptyCart(){
+    this.CartService.removeAllCart();
   }
 
 }

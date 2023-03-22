@@ -1,27 +1,35 @@
 <div class="cart-top container-fluid">
-  <div class="container ">
+  <div class="container">
     <div class="item">
-      <img src="https://rukminim1.flixcart.com/flap/128/128/image/f15c02bfeb02d15d.png?q=100" alt="">
-      <h6>All products</h6>
+      <a (click)="filter('')">
+        <img src="https://rukminim1.flixcart.com/flap/128/128/image/f15c02bfeb02d15d.png?q=100" alt="">
+        <h6>All products</h6>
+      </a>
     </div>
     <div class="item">
-      <img src="../../../assets/Electronics_img.png" alt="">
-      <h6>Electronics</h6>
+      <a (click)="filter('electronics')">
+        <img src="../../../assets/Electronics_img.png" alt="">
+        <h6>Electronics</h6>
+      </a>
     </div>
     <div class="item">
-      <img src="../../../assets/Fashion_img.png" alt="">
-      <h6>Fashion</h6>
+      <a (click)="filter('fashion')">
+        <img src="../../../assets/Fashion_img.png" alt="">
+        <h6>Fashion</h6>
+      </a>
     </div>
     <div class="item">
-      <img src="../../../assets/Jewerly_img.avif" alt="">
-      <h6>Jewllery</h6>
+      <a (click)="filter('jewelery')">
+        <img src="../../../assets/Jewerly_img.avif" alt="">
+        <h6>Jewllery</h6>
+      </a>
     </div>
   </div>
   <hr>
 </div>
 
 <div class="product-cnt">
-  <ng-container *ngFor="let item of ProductList">
+  <ng-container *ngFor="let item of ProductList | filter:searchKey:'description'">
     <div class="card">
       <div class="card-img-cnt">
         <img src="{{item.image}}" alt="Image product">

@@ -2,6 +2,7 @@
 .container{
   display: flex;
   gap: 2em;
+  margin-left: 2em;
 }
 
 .cart-top hr{

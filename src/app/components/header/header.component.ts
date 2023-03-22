@@ -8,7 +8,7 @@ import { CartService } from '../../service/cart.service';
 })
 export class HeaderComponent implements OnInit{
 
-
+  public searchTerm !: string;
   public totalItem: number = 0;
   constructor( private CartService: CartService){
 
@@ -19,5 +19,11 @@ export class HeaderComponent implements OnInit{
     .subscribe(res =>{
       this.totalItem = res.length;
     })
+  }
+
+  search(event:any){
+    this.searchTerm = (event.target as HTMLInputElement).value;
+    console.log(this.searchTerm);
+    this.CartService.search.next(this.searchTerm);
   }
 }

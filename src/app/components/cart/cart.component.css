@@ -34,3 +34,10 @@
 .table-img{
   width: 120px;
 }
+
+
+.cart-btns-cnt{
+  display: flex;
+  gap: 2em;
+  justify-content: end;
+}
